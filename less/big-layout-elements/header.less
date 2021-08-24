@@ -1,0 +1,202 @@
+.header {
+    background-color: @white;
+    position: relative;
+    z-index: 2;
+    
+    &__wrap {
+        padding: 14px 0 17px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo {
+        max-width: 218px;
+        display: inline-block;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        margin: -6px 0 0 153px;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 700;
+        color: @white;
+
+        &-item {
+            position: relative;
+            line-height: 1;
+
+            &:not(:last-of-type) {
+                margin-right: 47px;
+            }
+        }
+
+        &-drop {
+            position: absolute;
+            top: -1px;
+            right: -15px;
+            width: 15px;
+            height: 15px;
+            background-image: url('../img/icons/menu-arrow.png');
+            background-size: 7px 5px;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            transform: rotate(0);
+            transition: 0.3s;
+
+            &.active {
+                transform: rotate(0);
+            }
+        }
+
+        &-sub {
+            display: none;
+            position: absolute;
+            z-index: 2;
+            width: 175px;
+            top: 100%;
+            left: -50%;
+            //background-color: @darkBlue;
+            color: @white;
+            margin: 0;
+            padding: 20px 30px;
+            list-style: none;
+            font-size: 13px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        margin: -6px 0 0 auto;
+
+        &-item {
+            font-size: 14px;
+            font-weight: 700;
+            color: @white;
+
+            &:not(:last-child) {
+                margin-right: 46px;
+            }
+        }
+    }
+    
+
+    
+
+    .burger {        
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        position: relative;
+        //background-color: @green;
+        display: none;
+        margin-left: 22px;
+
+        span {
+            width: 20px;
+            height: 2px;
+            background-color: @white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            &:nth-of-type(1) {
+                bottom: 12px;
+            }
+
+            &:nth-of-type(3) {
+                top: 12px;
+            }
+        }
+    }
+
+    // .mobile-menu {
+    //     position: fixed;
+    //     z-index: 2;
+    //     right: 0;
+    //     top: 0;
+    //     width: 70%;
+    //     height: 100vh;
+    //     max-height: 100vh;
+    //     background-color: @darkBlue;
+    //     display: none;
+        
+    //     overflow: auto;
+
+    //     &__content {
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: space-between;
+    //         align-items: flex-start;
+    //         height: 100%;
+    //         padding: 80px 40px 40px;
+    //     }
+
+    //     &__close {
+    //         position: absolute;
+    //         top: 40px;
+    //         right: 40px;
+    //         background-color: @green;
+    //         width: 40px;
+    //         height: 40px;
+    //         border-radius: 100px;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;  
+    //     }
+    // }
+
+    .search-block {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: @white;
+        padding: 40px;
+    }
+
+    &_mainpage {
+        position: absolute!important;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        border: none;
+        background: none;
+    }
+
+    &_prod {
+        border: none;
+
+        &-border {
+            //border-bottom: 1px solid @darkBlue;
+
+        }
+
+        .header__wrap {
+            padding: 6px 0;
+        }
+
+        .logo {
+            max-width: 87px;
+        }
+
+        .header__menu {
+            margin: 5px 0 0 71px;
+        }
+
+        .icons {
+            margin-left: auto;
+        }
+    }
+}
