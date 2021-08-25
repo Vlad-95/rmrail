@@ -1,5 +1,5 @@
 .breadcrumbs {
-    padding: 0;
+    padding: 28px 0 28px 10px;
     margin: 0;
     list-style: none;
     display: flex;
@@ -16,13 +16,21 @@
             padding-right: 13px;
             margin-right: 6px;
             &:after {
-                content: "/";
+                content: "";
                 position: absolute;
                 right: 0;
                 top: 0;
+                width: 9px;
+                height: 8px;
+                background-image: url("../img/icons/marks-blue.png");
+                background-size: cover;
             }
         }
 
+        img {
+            width: 12px;
+            display: block;
+        }
         
     }
 }
