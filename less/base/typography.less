@@ -63,6 +63,25 @@ li:last-child {
   line-height: 1.25;
 }
 
+.block-subtitle {
+  margin: 0;
+  padding-bottom: 21px;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.25;      
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: @red;
+  }
+}
+
 .page-title {
   font-size: 70px;
   font-weight: 600;

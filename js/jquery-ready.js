@@ -12,6 +12,29 @@ $(document).ready(function() {
         });
     }
 
+    //карта на странице О нас
+    if($('.contacts').length) {
+        ymaps.ready(init);
+        function init(){
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                center: [54.22239007041141,45.159485999999916],
+                controls: [],                
+                zoom: 17
+            });
+
+            var myPlacemark = new ymaps.Placemark([54.22239007041141,45.159485999999916], {}, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/icons/map.png',
+                iconImageSize: [48, 57],
+                iconImageOffset: [-30, -40]
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+            myMap.behaviors.disable('scrollZoom');
+        }
+    }
+
     //Открытие/скрытие городов в шапке
     
 
