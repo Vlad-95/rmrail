@@ -3,12 +3,13 @@ $(document).ready(function() {
     if($('.slider').length) {
         $('.slider').slick({
             dots: true,
-            arrows: false,
-            appendDots: $(this).siblings('.slider-pag').find('.slider-pag__wrap .dots'),
-            customPaging: function(slick,index) {
-                    
-                return '<span>' + (index + 1) + '</span>';
+            arrows: false,            
+            customPaging : function(slider, i) {
+                return '<svg class="dots-svg" width="42" height="42" viewport="0 0 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle id="bar" r="20" cx="21" cy="21" fill="none" stroke-dasharray="140" stroke-dashoffset="140" stroke="white" stroke-width="2"></circle></svg><span>'+ (i + 1) +'</span>';
             },
+            autoplay: true,
+            autoplaySpeed: 6000,
+            appendDots: $('.slider-pag').find('.dots'),
         });
     }
 

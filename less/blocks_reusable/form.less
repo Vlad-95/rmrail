@@ -57,6 +57,7 @@
     &__agree {
         position: relative;
         display: block;
+        cursor: pointer;
 
         .agree {
             opacity: 0;
@@ -94,6 +95,8 @@
                 height: 12px;
                 background-image: url("../img/icons/tick.png");
                 background-size: cover;
+                opacity: 0;
+                transition: 0.3s;
             }
 
             a {
