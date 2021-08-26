@@ -119,48 +119,79 @@
         }
     }
 
-    // .mobile-menu {
-    //     position: fixed;
-    //     z-index: 2;
-    //     right: 0;
-    //     top: 0;
-    //     width: 70%;
-    //     height: 100vh;
-    //     max-height: 100vh;
-    //     background-color: @darkBlue;
-    //     display: none;
-        
-    //     overflow: auto;
+    .mobile-menu {
+        position: fixed;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        max-height: 100vh;
+        background-color: @blue;
+        display: none;        
+        overflow: auto;
 
-    //     &__content {
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: space-between;
-    //         align-items: flex-start;
-    //         height: 100%;
-    //         padding: 80px 40px 40px;
-    //     }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 100%;
+            padding: 80px 40px 40px;
+        }
 
-    //     &__close {
-    //         position: absolute;
-    //         top: 40px;
-    //         right: 40px;
-    //         background-color: @green;
-    //         width: 40px;
-    //         height: 40px;
-    //         border-radius: 100px;
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;  
-    //     }
-    // }
+        &__close {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background-color: @white;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 60%;
+                height: 2px;
+                background-color: @blue;
+                transform: rotate(45deg);
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 60%;
+                height: 2px;
+                background-color: @blue;
+                transform: rotate(-45deg);
+            }
+        }
+
+        .header__menu {
+            color: @white;
+        }
+    }
 
     &_mainpage {
         position: absolute!important;
         left: 0;
         top: 0;
         width: 100%;
-        z-index: 2;
+        z-index: 3;
         border: none;
         background: none;
         box-shadow: none;
@@ -260,15 +291,44 @@
 @media screen and (max-width: 992px) {
     .header {
         &__menu {
-            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+
+            &-item {
+                font-size: 17px;
+                margin-bottom: 20px!important;
+                
+            }
         }
 
         &__contacts {
-            display: none;
+           margin-left: 0;
+           align-items: flex-start;
+
+           &-item {
+               font-size: 17px;
+           }
         }
 
         .burger {
             display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        .mobile-menu {    
+            &__content {                
+                padding: 80px 20px 40px;
+            }
+
+            &__close {
+                top: 20px;
+                right: 20px;
+            }
+    
         }
     }
 }
