@@ -36,6 +36,10 @@
             border: 1px solid #c8d6ed;
             padding: 0 20px;
             color: @blue;
+
+            &.error {
+                border-color: @red;
+            }
         }
 
         &-comment {
@@ -44,6 +48,10 @@
             border: 1px solid #c8d6ed;
             padding: 20px;
             color: @blue;
+
+            &.error {
+                border-color: @red;
+            }
         }
     }
 
@@ -67,6 +75,12 @@
             &:checked + .feedback__agree-text {
                 &:after {
                     opacity: 1;
+                }
+            }
+
+            &.error + .feedback__agree-text {
+                &:before {
+                    border-color: @red;
                 }
             }
         }
