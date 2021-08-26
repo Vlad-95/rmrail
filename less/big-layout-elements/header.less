@@ -95,9 +95,8 @@
         height: 40px;
         border-radius: 100%;
         position: relative;
-        //background-color: @green;
         display: none;
-        margin-left: 22px;
+        margin-left: auto;
 
         span {
             width: 20px;
@@ -180,6 +179,96 @@
             span {
                 background-color: @white;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .header {
+        &__menu {
+            margin: -6px 0 0 110px;
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .header {
+        &__menu {
+            margin: -6px 0 0 60px;
+
+            &-item {    
+                &:not(:last-of-type) {
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        &__contacts {
+
+            &-item {    
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .header {
+        .logo {
+            max-width: 190px;
+        }
+
+        &__menu {
+            margin: -6px 0 0 40px;
+            font-size: 12px;
+        }
+
+        &__contacts {
+            &-item {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        &__menu {
+            &-item {    
+                &:not(:last-of-type) {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        &__contacts {
+            flex-direction: column;
+            align-items: flex-end;
+
+            &-item {
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        &__menu {
+            display: none;
+        }
+
+        &__contacts {
+            display: none;
+        }
+
+        .burger {
+            display: block;
         }
     }
 }
