@@ -13,6 +13,14 @@ $(document).ready(function() {
             autoplaySpeed: 6000,
             appendDots: $('.slider-pag').find('.dots'),
         });
+
+        $('.arrow.prev').click(function () {
+            $('.slider').slick('slickPrev');
+        })
+          
+        $('.arrow.next').click(function(){
+            $('.slider').slick('slickNext');
+        })
     }
 
     //карта на странице О нас
@@ -65,57 +73,4 @@ $(document).ready(function() {
         $('body').removeClass('opacity-layer no-scroll');
         $('.mobile-menu').hide("slide", { direction: "right" }, 500);
     })
-
-    //Открытие/скрытие городов в шапке
-    
-
-    //десктопное меню
-    // $('.header__menu .header__menu-drop').click(function () {
-    //     $(this).toggleClass('active').next().slideToggle();
-    // });
-
-    
-
-    
-
-    
-    //одинаковая высота новостей
-    // if($('.news').length) {
-    //     $('.news .news__item .news__item-content').matchHeight();
-    // };
-
-    // if($('.opportunities').length) {
-    //     $('.opportunities .opportunities__item .opportunities__item-name').matchHeight();
-    // };
-
-    // if($('#map').length) {
-    //     ymaps.ready(init);
-    //     function init(){
-    //         // Создание карты.
-    //         var myMap = new ymaps.Map("map", {
-    //             center: [59.85120307488966,30.30813975396727],
-    //             controls: ['geolocationControl'],                
-    //             zoom: 16
-    //         });
-
-    //         var myPlacemark = new ymaps.Placemark([59.85120307488966,30.30813975396727], {}, {
-    //             iconLayout: 'default#image',
-    //             iconImageHref: 'img/icons/map-marker.png',
-    //             iconImageSize: [55, 57],
-    //             iconImageOffset: [-28, -45]
-    //         });
-
-    //         myMap.geoObjects.add(myPlacemark);
-    //     }
-    // };
-
-    
-
-    //прикрепление файла
-    // $('.form__file input').on('change', function(e) {
-    //     let filename = $(this)[0].files[0].name;
-
-    //     $(this).siblings('.name').text(filename);
-        
-    //   })
 });
