@@ -46,8 +46,25 @@ $(document).ready(function() {
         }
     }
 
-    //Мобильное меню
+    //десктопное меню
+    $('.header__menu .header__menu-drop').click(function () {
+        $('.header__menu .header__menu-drop').not($(this)).removeClass('active').next().slideUp();
+        $(this).toggleClass('active').next().slideToggle();
+    });
 
+    $('body').click(function(e) {
+        let target = e.target;
+        
+        if ($(target).hasClass('opacity-layer') && $('.mobile-menu').css('display') == 'block') {
+            $('body').removeClass('opacity-layer');
+            $('.mobile-menu').hide("slide", { direction: "right" }, 500);
+        }
+       
+        
+        
+    })
+
+    //Мобильное меню
     if (window.innerWidth <= 992) {
         let desktopMenu = $('.header__menu');
         let headerContacts = $('.header__wrap .header__contacts');

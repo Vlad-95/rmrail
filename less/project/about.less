@@ -249,6 +249,10 @@
 
 @media screen and (max-width: 992px) {
     .about {
+        padding: 0px 0 30px;
+        &__img {
+            margin-bottom: 40px;
+        }
         &__wrap {    
             &_not-half {
                 .block-title {
@@ -270,7 +274,10 @@
         }
     }
 
-    .about-team {        
+    .about-team {    
+        margin-top: 0;
+        padding: 50px 0;  
+        margin-bottom: 30px;  
         .block-title {
             margin-bottom: 37px;
         }
@@ -283,6 +290,7 @@
     }
 
     .about-block {
+        padding: 50px 0 20px;
         .block-title {
             font-size: 25px;
             width: 40%;
@@ -299,7 +307,7 @@
 @media screen and (max-width: 768px) {
     .about {
         &__img {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         &__wrap {    
@@ -361,7 +369,7 @@
     }
 
     .about-block {
-        padding: 50px 0 40px;
+        
 
         &__wrap {
             display: block;
@@ -378,6 +386,47 @@
             padding-left: 0;
             
             p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about {
+
+        &__wrap {    
+            &_not-half {
+               
+
+                .block-title {
+                    width: 100%;
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &_half {
+                flex-wrap: wrap;
+                margin: 0;
+    
+                .about__text {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+
+        &__text {
+            h3 {
+                font-size: 17px;
+            }
+            p, li {
+                font-size: 15px;
+            }
+        
+            ul,
+            ol {
                 font-size: 15px;
             }
         }

@@ -34,16 +34,24 @@
             &:not(:last-of-type) {
                 margin-right: 47px;
             }
+
+            &>a {
+                transition: 0.3s;
+
+                &:hover {
+                    color: @red;
+                }
+            }
         }
 
         &-drop {
             position: absolute;
-            top: -1px;
-            right: -15px;
+            top: 0px;
+            right: -20px;
             width: 15px;
             height: 15px;
-            background-image: url('../img/icons/menu-arrow.png');
-            background-size: 7px 5px;
+            background-image: url('../img/icons/drop.png');
+            background-size: 8px 5px;
             background-position: center;
             background-repeat: no-repeat;
             cursor: pointer;
@@ -51,7 +59,7 @@
             transition: 0.3s;
 
             &.active {
-                transform: rotate(0);
+                transform: rotate(180deg);
             }
         }
 
@@ -59,15 +67,28 @@
             display: none;
             position: absolute;
             z-index: 2;
-            width: 175px;
-            top: 100%;
+            width: 400px;
+            top: calc(100% + 20px);
             left: -50%;
-            //background-color: @darkBlue;
+            background-color: @blue;
             color: @white;
             margin: 0;
             padding: 20px 30px;
             list-style: none;
             font-size: 13px;
+
+            li {
+                &:not(:last-of-type) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            a {
+                transition: 0.3s;
+                &:hover {
+                    color: @red;
+                }
+            }
         }
     }
 
@@ -297,8 +318,14 @@
 
             &-item {
                 font-size: 17px;
+                width: 248px;
                 margin-bottom: 20px!important;
                 
+            }
+
+            &-sub {
+                position: static;
+                width: 400px;
             }
         }
 
@@ -329,6 +356,24 @@
                 right: 20px;
             }
     
+        }
+
+        &__menu {
+            &-item {
+                font-size: 14px;
+                width: 200px;
+            }
+
+            &-sub {
+                width: 216px;
+                padding: 15px;
+            }
+        }
+
+        &__contacts {
+            &-item {
+                font-size: 14px;
+            }
         }
     }
 }
