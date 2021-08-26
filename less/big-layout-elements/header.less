@@ -50,7 +50,7 @@
             right: -20px;
             width: 15px;
             height: 15px;
-            background-image: url('../img/icons/drop.png');
+            background-image: url('../img/icons/drop-blue.png');
             background-size: 8px 5px;
             background-position: center;
             background-repeat: no-repeat;
@@ -68,7 +68,7 @@
             position: absolute;
             z-index: 2;
             width: 400px;
-            top: calc(100% + 20px);
+            top: calc(100% + 28px);
             left: -50%;
             background-color: @blue;
             color: @white;
@@ -204,6 +204,10 @@
 
         .header__menu {
             color: @white;
+
+            &-drop {
+                background-image: url("../img/icons/drop.png");
+            }
         }
     }
 
@@ -219,6 +223,10 @@
 
         .header__menu {
             color: @white;
+
+            &-drop {
+                background-image: url("../img/icons/drop.png");
+            }
         }
 
         .header__contacts {
@@ -275,6 +283,11 @@
         &__menu {
             margin: -6px 0 0 40px;
             font-size: 12px;
+
+            &-sub {
+               
+                top: calc(100% + 26px);
+            }
         }
 
         &__contacts {
@@ -292,6 +305,10 @@
                 &:not(:last-of-type) {
                     margin-right: 20px;
                 }
+            }
+
+            &-drop {
+                right: -15px;
             }
         }
 
