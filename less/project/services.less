@@ -55,6 +55,7 @@
             padding: 0;
             list-style: none;
             margin: 20px 0;
+            font-size: 17px;
 
             li {
                 position: relative;  
@@ -155,6 +156,22 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .services {
+        &__wrap {
+            display: flex;
+            align-items: flex-start;
+    
+            .block-title {
+                width: 40%;
+                font-size: 30px;
+            }
+    
+            .services__text {
+                width: 60%;
+                padding-left: 55px;
+            }
+        }
+    }
     .services-block {
         .block-title {
             font-size: 40px;
@@ -168,6 +185,26 @@
 }
 
 @media screen and (max-width: 992px) {
+    .services {
+        &__wrap {    
+            .block-title {
+                
+                font-size: 25px;
+            }
+        }
+
+        &__text {
+            p, li {
+                font-size: 15px;
+            }
+    
+            ul,
+            ol {
+                font-size: 15px;
+            }
+        }
+    }
+
     .services-block {
         &__item {
             width: calc((100%/2) - 30px);
@@ -176,6 +213,25 @@
         &__text {
             font-size: 15px;
         }        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        &__wrap {
+            display: block;
+
+            .block-title {
+                font-size: 25px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+    
+            .services__text {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
     }
 }
 
