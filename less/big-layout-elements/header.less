@@ -105,6 +105,15 @@
             &:not(:last-child) {
                 margin-right: 46px;
             }
+
+            &.lang {
+                .lang__item {
+                    text-transform: uppercase;
+                    transition: 0.3s;
+                    color: @red;
+                    font-size: 20px;
+                }
+            }
         }
     }
     
@@ -254,7 +263,7 @@
 @media screen and (max-width: 1500px) {
     .header {
         &__menu {
-            margin: -6px 0 0 60px;
+            margin: -6px 0 0 40px;
 
             &-item {    
                 &:not(:last-of-type) {
@@ -267,7 +276,7 @@
 
             &-item {    
                 &:not(:last-child) {
-                    margin-right: 30px;
+                    margin-right: 20px;
                 }
             }
         }
@@ -352,6 +361,14 @@
 
            &-item {
                font-size: 17px;
+               color: @white;
+
+               &.lang {
+                   margin-top: 20px;
+                .lang__item {
+                    font-size: 20px;
+                }
+            }
            }
         }
 
