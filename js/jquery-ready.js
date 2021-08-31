@@ -27,14 +27,15 @@ $(document).ready(function() {
     if($('.contacts').length) {
         ymaps.ready(init);
         function init(){
+            var map = $('#map');
             // Создание карты.
             var myMap = new ymaps.Map("map", {
-                center: [54.22239007041141,45.159485999999916],
+                center: [map.data("coordx"), map.data("coordy")],
                 controls: [],                
                 zoom: 17
             });
 
-            var myPlacemark = new ymaps.Placemark([54.22239007041141,45.159485999999916], {}, {
+            var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/icons/map.png',
                 iconImageSize: [48, 57],
