@@ -174,6 +174,54 @@
                 margin-bottom: 28px;
             }
         }
+
+        ul,
+        ol {
+            font-size: 17px;
+            padding: 0;
+            list-style: none;
+            margin: 20px 0;
+
+            li {
+                position: relative;  
+                padding-left: 20px;
+                margin-bottom: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        ul {
+            li {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 7px;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 100px;
+                    background-color: @blue;
+                }
+            }
+        }
+
+        ol {
+            counter-reset: item;
+
+            li {
+                counter-increment: item;
+
+                &:before {
+                    content: counter(item)".";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
     }
 
     .red-link {
@@ -298,6 +346,11 @@
 
         &__text {
             p {
+                font-size: 15px;
+            }
+
+            ul,
+            ol {
                 font-size: 15px;
             }
         }
