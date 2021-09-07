@@ -107,11 +107,34 @@
             }
 
             &.lang {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
                 .lang__item {
                     text-transform: uppercase;
                     transition: 0.3s;
                     color: @red;
                     font-size: 20px;
+
+                    &:last-of-type {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        margin-top: 23px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: 0.3s;
+                    }
+                }
+
+                &:hover {
+                    .lang__item {
+                        &:last-of-type {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
                 }
             }
         }
@@ -364,11 +387,21 @@
                color: @white;
 
                &.lang {
-                   margin-top: 20px;
-                .lang__item {
-                    font-size: 20px;
+                    margin-top: 20px;
+                    flex-direction: row;
+
+                    .lang__item {
+                        font-size: 20px;
+
+                        &:last-of-type {
+                            position: static;
+                            visibility: visible;
+                            opacity: 1;
+                            margin-top: 0;
+                            margin-left: 10px;
+                        }
+                    }
                 }
-            }
            }
         }
 
