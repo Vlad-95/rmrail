@@ -1,0 +1,116 @@
+.partners {
+    box-shadow: 0px 0px 15px 0px rgba(0, 90, 168, 0.15);
+    background-color: @white;
+    padding: 40px 0 50px;
+    margin-bottom: 65px;
+
+    &__slider {
+        &-item {
+
+            &-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 140px;
+                padding: 0 25px;
+            }
+        }
+
+        .slick-prev {
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-color: @red;
+            z-index: 2;
+            border-radius: 100px;
+
+            &:hover {
+                background-color: @red;
+            }
+
+
+            &:before {
+                position: absolute;
+                content: '';
+                font-family: none;
+                opacity: 1;
+                width: 9px;
+                height: 7px;
+                background-image: url('../img/icons/marks.png');
+                background-size: 9px 7px;
+                background-repeat: no-repeat;
+                display: block;
+                top: 0;
+                left: -1px;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                transform: rotate(180deg);
+            }
+        }
+
+        .slick-next {
+            right: 0;
+            width: 24px;
+            height: 24px;
+            background-color: @red;
+            z-index: 2;
+            border-radius: 100px;
+
+            &:hover {
+                background-color: @red;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                font-family: none;
+                opacity: 1;
+                width: 9px;
+                height: 7px;
+                background-image: url('../img/icons/marks.png');
+                background-size: 9px 7px;
+                background-repeat: no-repeat;
+                display: block;
+                top: 0;
+                left: 0;
+                right: -1px;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .partners {
+        &__slider {
+            padding: 0 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .partners {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .partners {
+        padding: 40px 0;
+        &__slider {
+            &-item {
+                &-wrap {
+                    height: 132px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .partners {
+        padding: 40px 0 25px;
+    }
+}

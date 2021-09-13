@@ -90,5 +90,41 @@ $(document).ready(function() {
     $('.mobile-menu__close').click(function() {
         $('body').removeClass('opacity-layer no-scroll');
         $('.mobile-menu').hide("slide", { direction: "right" }, 500);
-    })
+    });
+
+    //слайдер партнеров
+    if($('.partners').length) {
+        $('.partners__slider').slick({
+            slidesToShow: 6,
+            arrows: true,
+            infinite: true,
+
+            responsive: [
+                {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 5
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 577,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+    }
 });
