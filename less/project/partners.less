@@ -14,6 +14,11 @@
                 height: 140px;
                 padding: 0 25px;
             }
+
+            &[href="javascript:;"] {
+                cursor: default;
+                pointer-events: none;
+            }
         }
 
         .slick-prev {
@@ -24,7 +29,8 @@
             z-index: 2;
             border-radius: 100px;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: @red;
             }
 
@@ -57,7 +63,8 @@
             z-index: 2;
             border-radius: 100px;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: @red;
             }
 
