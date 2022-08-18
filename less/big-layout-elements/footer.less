@@ -64,12 +64,12 @@
                 position: relative;
 
                 &:not(:last-of-type) {
-                    margin-right: 40px;
+                    margin-right: 10px;
 
                     &:before {
                         content: '';
                         position: absolute;
-                        right: -22px;
+                        right: -8px;
                         top: 0;
                         width: 1px;
                         height: 100%;
@@ -80,7 +80,7 @@
 
             &:nth-of-type(2) {
                 margin-left: auto;
-                margin-right: 119px;
+                margin-right: 45px;
             }
             
 
@@ -204,6 +204,28 @@
 
                         &:before {
                             left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        .rights {
+            &__item {
+                &:nth-of-type(1) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    a {
+                        margin: 5px 0;
+
+                        &::before {
+                            display: none;
                         }
                     }
                 }
